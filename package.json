@@ -1,0 +1,12 @@
+{
+  "name": "scrap",
+  "version": "1.0.0",
+  "description": "test for scrapping",
+  "main": "index.ts",
+  "scripts": {
+    "dev":"",
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC"
+}
