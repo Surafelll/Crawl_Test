@@ -1,14 +1,21 @@
-import { Browser } from "puppeteer";
+import puppeteer, { Browser } from 'puppeteer';
 
-const puppeteer = require('puppeteer') ;
+const url = 'https://books.toscrape.com/';
 
-const url ='https://books.toscrape.com/' ;
+const main = async () => {
+    try {
+        const browser: Browser = await puppeteer.launch({ headless: false });
+        const page = await browser.newPage();
+        console.log("Test");
+        await page.goto(url);
+        
+        
 
-const main = async() =>{
-    const browser: Browser = await puppeteer.launch() ;
-    // console.log("Test");
-    await browser.close()
-    
-}
+        await browser.close();
+    } 
+    catch (error) {
+        console.error('Error:', error);
+    }
+};
 
-main()
+main();
